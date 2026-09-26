@@ -1,0 +1,126 @@
+{
+  "model_type": "portable_decision_tree",
+  "purpose": "edge_hard_anomaly_gate",
+  "features": [
+    "temperature",
+    "pressure",
+    "humidity",
+    "abs_temp_delta",
+    "abs_pressure_delta",
+    "abs_humidity_delta",
+    "temp_std5",
+    "pressure_std5",
+    "humidity_std5",
+    "temp_out_of_range",
+    "pressure_out_of_range",
+    "humidity_out_of_range"
+  ],
+  "max_depth": 6,
+  "test_accuracy": 0.9989041095890411,
+  "training_note": "Offline-trained on historical AWS normal observations plus simulated hard faults: out-of-range values, abrupt spikes and frozen channels.",
+  "tree": {
+    "leaf": false,
+    "feature": "pressure",
+    "threshold": 946.9461669921875,
+    "left": {
+      "leaf": false,
+      "feature": "pressure",
+      "threshold": 946.2498779296875,
+      "left": {
+        "leaf": true,
+        "prob_normal": 0.0,
+        "prob_hard": 0.0005860805860805861
+      },
+      "right": {
+        "leaf": true,
+        "prob_normal": 0.02203856749311295,
+        "prob_hard": 0.09917355371900827
+      }
+    },
+    "right": {
+      "leaf": false,
+      "feature": "humidity_out_of_range",
+      "threshold": 0.5,
+      "left": {
+        "leaf": false,
+        "feature": "temp_out_of_range",
+        "threshold": 0.5,
+        "left": {
+          "leaf": false,
+          "feature": "abs_pressure_delta",
+          "threshold": 2.7615317321760813e-05,
+          "left": {
+            "leaf": false,
+            "feature": "temperature",
+            "threshold": 34.40542411804199,
+            "left": {
+              "leaf": false,
+              "feature": "humidity",
+              "threshold": 48.90617370605469,
+              "left": {
+                "leaf": true,
+                "prob_normal": 0.00028935185185185184,
+                "prob_hard": 0.013599537037037037
+              },
+              "right": {
+                "leaf": true,
+                "prob_normal": 0.0,
+                "prob_hard": 0.0007676069852235655
+              }
+            },
+            "right": {
+              "leaf": false,
+              "feature": "abs_humidity_delta",
+              "threshold": 4.7306545525316324e-07,
+              "left": {
+                "leaf": true,
+                "prob_normal": 0.02666666666666667,
+                "prob_hard": 0.04
+              },
+              "right": {
+                "leaf": true,
+                "prob_normal": 0.0,
+                "prob_hard": 0.004975124378109453
+              }
+            }
+          },
+          "right": {
+            "leaf": false,
+            "feature": "pressure",
+            "threshold": 1016.156494140625,
+            "left": {
+              "leaf": false,
+              "feature": "abs_humidity_delta",
+              "threshold": 21.11403179168701,
+              "left": {
+                "leaf": true,
+                "prob_normal": 0.00012189918937039069,
+                "prob_hard": 0.0
+              },
+              "right": {
+                "leaf": true,
+                "prob_normal": 0.0,
+                "prob_hard": 0.0025940337224383916
+              }
+            },
+            "right": {
+              "leaf": true,
+              "prob_normal": 0.0,
+              "prob_hard": 0.0008022462896109105
+            }
+          }
+        },
+        "right": {
+          "leaf": true,
+          "prob_normal": 0.0,
+          "prob_hard": 0.0006190034045187249
+        }
+      },
+      "right": {
+        "leaf": true,
+        "prob_normal": 0.0,
+        "prob_hard": 0.000599250936329588
+      }
+    }
+  }
+}
