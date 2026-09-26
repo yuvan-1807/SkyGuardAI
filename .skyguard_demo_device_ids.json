@@ -1,0 +1,12 @@
+{
+  "AWS_01_Delhi": "ESP32-DEMO-061BDAC9D0-AWS_01_Delhi",
+  "AWS_02_Mumbai": "ESP32-DEMO-061BDAC9D0-AWS_02_Mumbai",
+  "AWS_03_Chennai": "ESP32-DEMO-061BDAC9D0-AWS_03_Chennai",
+  "AWS_04_Himachal": "ESP32-DEMO-061BDAC9D0-AWS_04_Himachal",
+  "AWS_05_Kolkata": "ESP32-DEMO-061BDAC9D0-AWS_05_Kolkata",
+  "AWS_06_Bangalore": "ESP32-DEMO-061BDAC9D0-AWS_06_Bangalore",
+  "AWS_07_Kerala": "ESP32-DEMO-061BDAC9D0-AWS_07_Kerala",
+  "AWS_08_Rajasthan": "ESP32-DEMO-061BDAC9D0-AWS_08_Rajasthan",
+  "AWS_09_NorthEast": "ESP32-DEMO-061BDAC9D0-AWS_09_NorthEast",
+  "AWS_10_Gujarat": "ESP32-DEMO-061BDAC9D0-AWS_10_Gujarat"
+}
